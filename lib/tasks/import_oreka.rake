@@ -1,6 +1,8 @@
 require 'csv'
 desc 'Import Oreka v1 transactions from CSV'
 task :import_oreka => :environment do
+  raise Exception.new('This task should not be run more than once!')
+
   file = ARGV[1]
   puts "Importing #{file}"
 

@@ -1,6 +1,8 @@
 require 'csv'
 desc 'Import acasa transactions from CSV'
 task :import_acasa => :environment do
+  raise Exception.new('This task should not be run more than once!')
+
   file = ARGV[1]
   puts "Importing #{file}"
 
