@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: oreka_production
+  database: oreka
   username: oreka
   password: <%= ENV['OREKA_DATABASE_PASSWORD'] %>
